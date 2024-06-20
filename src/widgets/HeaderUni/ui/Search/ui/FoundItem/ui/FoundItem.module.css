@@ -1,0 +1,51 @@
+.Item{
+    display: flex;
+}
+.itemImage{
+    width: 120px;
+    height: 120px;
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    display: block;
+    box-sizing: border-box;
+}
+.itemTitle{
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+.itemPretitle{
+    color: rgba(0, 0, 0, 0.40);
+    font-size: 12px;
+    width: 190px;
+}
+.category{
+    color: #000;
+    font-size: 14px;
+}
+.title{
+    font-size: 20px;
+    color: #000;
+    margin-top: 5px;
+}
+.price{
+    color: #365611;
+    font-size: 26px;
+    margin-top: 20px;
+}
+.action{
+    display: flex;
+    flex-direction: column;
+    margin-top: 8px;
+}
+.prevPrice{
+    text-decoration: line-through;
+    color: #A0A0A0;
+    font-size: 12px;
+    margin-left: 3px;
+}
+.presPrice, .price{
+    color: #365611;
+    font-size: 26px;
+}

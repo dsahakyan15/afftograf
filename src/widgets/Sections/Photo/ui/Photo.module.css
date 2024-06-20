@@ -1,0 +1,34 @@
+.Photo {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+.background {
+  z-index: 0;
+  margin: 200px auto 0 auto;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+  text-align: center;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.title{
+    font-size: 64px;
+    margin-bottom: 15px;
+}
+.about{
+    font-size: 20px;
+    margin-bottom: 45px;
+}
+.link{
+    color: #719746;
+    font-size: 20px;
+}

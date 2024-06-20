@@ -1,0 +1,28 @@
+.WoodArt{
+    display: flex;
+    flex-direction: column;
+    height: 110vh;
+    overflow: hidden;
+}
+.head{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 10px auto;
+}
+.logo{
+    width: 190px;
+    margin: 100px auto 0 auto;
+}
+.pretitle{
+    font-size: 20px;
+    margin: 20px 0;
+}
+.link{
+    font-size: 20px;
+    color: #365611;
+}
+.wood{
+    height: 1300px;
+    margin: 0 auto;
+}

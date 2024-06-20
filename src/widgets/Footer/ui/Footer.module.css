@@ -1,0 +1,32 @@
+.Footer{
+    display: flex;
+    padding: 40px 170px;
+    width: 100%;
+    color: #fff;
+    box-sizing: border-box;
+    background: linear-gradient(91deg, #365611 1.62%, #3C5E12 99.46%);
+    justify-content: space-between;
+    margin-top: auto;
+}
+.text{
+    flex-basis: 80%;
+    font-style: 16px;
+}
+.strong{
+    font-weight: 600;
+}
+.contact{
+    display: flex;
+    align-items: center;
+}
+.socials{
+    font-size: 32px;
+    display: flex;
+    flex-direction: column;
+    margin:0 10px;
+}
+
+.waIcon, .vkIcon{
+    
+    color: #fff;
+}

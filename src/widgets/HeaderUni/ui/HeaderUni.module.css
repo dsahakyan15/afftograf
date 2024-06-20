@@ -1,0 +1,19 @@
+.header{
+    padding: 30px 175px;
+    display: flex;
+    justify-content: space-between;
+}
+.personal{
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+.searchBtn{
+    color: #365611;
+    font-size: 20px;
+}
+.user{
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 20px;
+    margin-left: 20px;
+}

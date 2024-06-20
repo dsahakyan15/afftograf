@@ -1,0 +1,30 @@
+.Stamps{
+    height: 130vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.text{
+    margin: 200px auto 0 auto;
+    display: flex;
+    width: 900px;
+    flex-direction: column;
+    text-align: center;
+}
+.title{
+    font-size: 55px;
+    display: block;
+    margin-bottom: 20px;
+}
+.pretitle{
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+.link{
+    font-size: 20px;
+    color: #365611;
+}
+.stamp{
+    width:1200px;
+    margin: 0 auto;
+}

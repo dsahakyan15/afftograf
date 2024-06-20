@@ -1,0 +1,52 @@
+.container {
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/afftograf-e496c.appspot.com/o/images%2FPhoto%2FPhotoBackground.png?alt=media&token=9aea93af-64dc-4757-a7a5-7fe44d7c04e0");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: -20px 0;
+  display: flex;
+}
+.cards {
+  display: flex;
+  align-items: flex-end;
+  margin: 50px auto 130px auto;
+}
+.cardFisrt,
+.cardSecond {
+  height: 540px;
+  width: 340px;
+  box-shadow: 0px 0px 33.333px 0px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(12px);
+  border-radius: 25px;
+  margin-right: 80px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-end;
+}
+.cardFisrt {
+  background: url("https://firebasestorage.googleapis.com/v0/b/afftograf-e496c.appspot.com/o/images%2FPhoto%2FCardFirst.png?alt=media&token=7a4b3098-2e52-43de-bd1b-5f8086ff5fba"),
+    linear-gradient(198deg, #365611 -5.7%, rgba(255, 255, 255, 0) 152.02%) 0px -147px /
+      390.418% 144.177% no-repeat;
+}
+.cardSecond {
+  background: url("https://firebasestorage.googleapis.com/v0/b/afftograf-e496c.appspot.com/o/images%2FPhoto%2FCardSecond.png?alt=media&token=6ab28d5a-bfd5-472a-a3f9-6a226f333178"),
+    linear-gradient(198deg, #365611 -5.7%, rgba(255, 255, 255, 0) 152.02%) 0px -147px /
+      100% 100% no-repeat;
+  background-position: top;
+}
+.cardTitle {
+  color: #fff;
+  font-size: 34px;
+  margin: 35px;
+}
+.infoDesk {
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.6);
+  width: 420px;
+  height: 270px;
+  font-size: 18px;
+  padding: 25px 23px;
+  box-sizing: border-box;
+  display: flex;
+  box-shadow: 0px 0px 33.333px 0px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(12.500000953674316px);
+}
