@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/afftograf/static/css/main.dd77cad7.css",
+    "main.js": "/afftograf/static/js/main.4df75cc2.js",
+    "static/media/WoodArt.svg": "/afftograf/static/media/WoodArt.7abac041e70157d298f545fa5494f131.svg",
+    "index.html": "/afftograf/index.html",
+    "main.dd77cad7.css.map": "/afftograf/static/css/main.dd77cad7.css.map",
+    "main.4df75cc2.js.map": "/afftograf/static/js/main.4df75cc2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dd77cad7.css",
+    "static/js/main.4df75cc2.js"
+  ]
+}
