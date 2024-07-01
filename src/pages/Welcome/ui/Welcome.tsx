@@ -1,5 +1,6 @@
 import styles from './Welcome.module.css'
 import { useState } from 'react'
+import { useLocation } from 'react-router-dom'
 
 import Main from 'widgets/Sections/Main'
 import Photo from 'widgets/Sections/Photo'
@@ -12,7 +13,8 @@ const Welcome = () => {
     const [animActive, setAnimActive] = useState<Boolean>(false)
 
 
-
+    let location = useLocation();
+    console.log(location);
     return (
         <>
             {

@@ -4,11 +4,12 @@
   background-size: cover;
   background-position: -20px 0;
   display: flex;
+  overflow-x: auto;
 }
 .cards {
   display: flex;
   align-items: flex-end;
-  margin: 50px auto 130px auto;
+  margin: 50px auto 130px 175px;
 }
 .cardFisrt,
 .cardSecond {
