@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styles from './Footer.module.css'
 import { FaVk, FaWhatsapp } from "react-icons/fa6";
 
@@ -22,7 +23,10 @@ const Footer = () => {
                         <FaWhatsapp />
                     </a>
                 </div>
-                <img src="https://firebasestorage.googleapis.com/v0/b/afftograf-e496c.appspot.com/o/images%2FAfftografSmallWhite.svg?alt=media&token=60708d4d-e6d5-49a9-b7ba-1db69c031849" alt="Logo Afftograf" />
+                <Link to='/'>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/afftograf-e496c.appspot.com/o/images%2FAfftografSmallWhite.svg?alt=media&token=60708d4d-e6d5-49a9-b7ba-1db69c031849" alt="Logo Afftograf" />
+                </Link>
+
             </div>
         </div>
     )

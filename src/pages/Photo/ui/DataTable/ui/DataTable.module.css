@@ -18,6 +18,7 @@
 }
 .headItemS {
   width: 150px;
+  display: flex;
   padding: 45px 0 30px;
   border: #fff 2px solid;
 }
@@ -27,44 +28,74 @@
 .headItemS:last-child {
   border-top-right-radius: 20px;
 }
+.headItemS > p {
+  margin: 0 auto;
+}
 .headItemL {
   width: 450px;
   display: flex;
-  padding: 45px 0 30px;
+  padding: 45px 15px 30px;
   border: #fff 2px solid;
-}
-.headItemTitle {
-  margin-left: 25px;
 }
 .tableBar {
   display: flex;
+  max-height: 105px;
+}
+.tableBar:last-child>.barItemFirst{
+  border-bottom-left-radius: 20px;
 }
 .barItemFirst {
-  padding: 14px 50px;
   width: 150px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #acacac10;
   border: #fff 2px solid;
 }
 .barItemFirst > p {
   color: #000;
+  margin: 0;
+  font-size: 16px;
 }
 .barItemL {
   width: 450px;
-  display: flex;
-  padding: 45px 0 30px;
   background-color: #f9f9f985;
   border: #fff 2px solid;
+  padding: 14px 25px;
 }
-.barItemS{
+.barItemS {
   width: 150px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 .barItemTitle {
   color: #000;
+  font-size: 16px;
 }
-.barItemTab{
+.barItemTab {
   border: #fff 2px solid;
-background-color: #f9f9f985;
+  background-color: #f9f9f985;
+  margin: 0;
+  font-size: 16px;
+  padding: 5px 0;
+  height: 35px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.barItemTabPrice{
+ border: #fff 2px solid;
+  background-color: #f9f9f985;
+  margin: 0;
+  color: #365611;
+  font-size: 16px;
+  padding: 5px 0;
+  height: 35px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
