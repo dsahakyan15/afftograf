@@ -1,4 +1,4 @@
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 import styles from './Logo.module.css'
 
@@ -7,7 +7,9 @@ const Logo = () => {
 
     return (
         <div className={styles.logo}>
-            <img className={styles.afftograf} src="https://firebasestorage.googleapis.com/v0/b/afftograf-e496c.appspot.com/o/images%2FAfftografBig.svg?alt=media&token=aa9ecafc-0415-4ae1-a538-a948788b125e" alt="Logo" />
+            <Link to='/'>
+                <img className={styles.afftograf} src="https://firebasestorage.googleapis.com/v0/b/afftograf-e496c.appspot.com/o/images%2FAfftografBig.svg?alt=media&token=aa9ecafc-0415-4ae1-a538-a948788b125e" alt="Logo" />
+            </Link>
             <div className={styles.divider}></div>
 
             {
