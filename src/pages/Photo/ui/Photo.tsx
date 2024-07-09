@@ -14,7 +14,7 @@ const [tableHide,setTableHide] = useState(false)
       <HeaderUni />
       <div className={styles.container}>
         <div className={styles.cards}>
-          <div onClick={() => { setTableHide(!tableHide) }} className={styles.cardFisrt}>
+          <div onClick={() => { setTableHide(!tableHide) }} className={styles.cardFirst}>
             <span className={styles.cardTitle}>Узнать цену съемки фотографии для документов</span>
           </div>
           {tableHide ? <DataTable/> : null}

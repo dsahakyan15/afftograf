@@ -11,7 +11,7 @@
   align-items: flex-end;
   margin: 50px auto 130px 175px;
 }
-.cardFisrt,
+.cardFirst,
 .cardSecond {
   height: 540px;
   width: 340px;
@@ -20,9 +20,10 @@
   border-radius: 25px;
   box-sizing: border-box;
   display: flex;
+  cursor: pointer;
   align-items: flex-end;
 }
-.cardFisrt {
+.cardFirst {
   background: url("https://firebasestorage.googleapis.com/v0/b/afftograf-e496c.appspot.com/o/images%2FPhoto%2FCardFirst.png?alt=media&token=7a4b3098-2e52-43de-bd1b-5f8086ff5fba"),
     linear-gradient(198deg, #365611 -5.7%, rgba(255, 255, 255, 0) 152.02%) 0px -147px /
       390.418% 144.177% no-repeat;

@@ -1,0 +1,27 @@
+.container{
+    padding:30px 175px;
+}
+.banner{
+    height: 200px;
+    border-radius: 30px;
+    background-image: url(./images/Banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 75px 105px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+.bannerTitle{
+    font-size: 40px;
+    color: #fff;
+    display: flex;
+    margin-right: 40px;
+}
+.bannerBio{
+    display: flex;
+    width: 370px;
+    color: #fff;
+    font-style: 16px;
+}
