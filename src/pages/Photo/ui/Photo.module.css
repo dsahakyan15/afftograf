@@ -1,5 +1,5 @@
 .container {
-  background-image: url("https://firebasestorage.googleapis.com/v0/b/afftograf-e496c.appspot.com/o/images%2FPhoto%2FPhotoBackground.png?alt=media&token=9aea93af-64dc-4757-a7a5-7fe44d7c04e0");
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/afftograf-4be9e.appspot.com/o/PhotoBackground.png?alt=media&token=e9bd5923-aeee-400a-b6f1-e3c19995695d");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: -20px 0;
@@ -24,7 +24,7 @@
   align-items: flex-end;
 }
 .cardFirst {
-  background: url("https://firebasestorage.googleapis.com/v0/b/afftograf-e496c.appspot.com/o/images%2FPhoto%2FCardFirst.png?alt=media&token=7a4b3098-2e52-43de-bd1b-5f8086ff5fba"),
+  background: url("https://firebasestorage.googleapis.com/v0/b/afftograf-4be9e.appspot.com/o/CardFirst.png?alt=media&token=1de0ddc8-50f9-4ddb-9f9a-57d6fe10a7b1"),
     linear-gradient(198deg, #365611 -5.7%, rgba(255, 255, 255, 0) 152.02%) 0px -147px /
       390.418% 144.177% no-repeat;
   margin-right: 40px;
@@ -32,7 +32,7 @@
 .cardSecond {
   margin-left: 40px;
   margin-right: 40px;
-  background: url("https://firebasestorage.googleapis.com/v0/b/afftograf-e496c.appspot.com/o/images%2FPhoto%2FCardSecond.png?alt=media&token=6ab28d5a-bfd5-472a-a3f9-6a226f333178"),
+  background: url("https://firebasestorage.googleapis.com/v0/b/afftograf-4be9e.appspot.com/o/CardSecond.png?alt=media&token=8827945b-2291-4ceb-a217-9e1381bd86b8"),
     linear-gradient(198deg, #365611 -5.7%, rgba(255, 255, 255, 0) 152.02%) 0px -147px /
       100% 100% no-repeat;
   background-position: top;

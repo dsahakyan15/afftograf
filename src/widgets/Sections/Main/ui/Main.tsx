@@ -6,7 +6,7 @@ const Main = () => {
   return (
       <div className={styles.Main}>
           <div className={styles.mainInner}>
-              <img src="https://firebasestorage.googleapis.com/v0/b/afftograf-e496c.appspot.com/o/images%2FAfftografBig.svg?alt=media&token=aa9ecafc-0415-4ae1-a538-a948788b125e" alt="Logo BIG" />
+              <img src="https://firebasestorage.googleapis.com/v0/b/afftograf-4be9e.appspot.com/o/AfftografBig.svg?alt=media&token=48a52a85-1071-4e1d-97fc-f24982b8d858" alt="Logo BIG" />
               <div className={styles.line}></div>
               <div className={styles.mainLinks}>
 
@@ -30,7 +30,7 @@ const Main = () => {
                   /
                   <Link to="/woodArt">
                       <span className={styles.mainLink}>
-                          <img className={styles.wood} src="https://firebasestorage.googleapis.com/v0/b/afftograf-e496c.appspot.com/o/images%2FWoodArt.svg?alt=media&token=6fafb519-ade0-4c8e-a1b8-876b14caedd8" alt="Wood Art" />
+                          <img className={styles.wood} src="https://firebasestorage.googleapis.com/v0/b/afftograf-4be9e.appspot.com/o/WoodArt.svg?alt=media&token=68fde309-08d2-4e5d-8096-cf7f71a55304" alt="Wood Art" />
                       </span>
                   </Link>
               </div>

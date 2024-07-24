@@ -7,6 +7,8 @@ import Photo from "pages/Photo"
 import Printing from "pages/Printing"
 import Stamps from "pages/Stamps"
 import WoodArt from "pages/WoodArt"
+import { Provider } from "react-redux"
+import { store } from "entitles/redux/store"
 
 
 
@@ -15,16 +17,18 @@ const App = () => {
 
 
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/photo" element={<Photo />} />
-        <Route path="/printing" element={<Printing/>} />
-        <Route path="/stamps" element={<Stamps/>} />
-        <Route path="/woodArt" element={<WoodArt/>} />
-        <Route path="/" element={<Welcome />} />
-      </Routes>
-      <Footer />
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/photo" element={<Photo />} />
+          <Route path="/printing" element={<Printing />} />
+          <Route path="/stamps" element={<Stamps />} />
+          <Route path="/woodArt" element={<WoodArt />} />
+          <Route path="/" element={<Welcome />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </Provider>
   )
 }
 

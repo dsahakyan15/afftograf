@@ -51,7 +51,10 @@ const Menu = () => {
                                     Печати и штампы
                                 </span>
                             </Link>
-                            <div className={styles.divider}></div>
+                           {
+                            // if there is a woodart page
+                            location === '/woodArt' ? null : <div className={styles.divider}></div>
+                           }
                         </>
 
                 }

@@ -1,30 +1,31 @@
-import { useReducer } from 'react'
+import { useEffect, useReducer, useRef } from 'react'
 import styles from './Printing.module.css'
 import HeaderUni from 'widgets/HeaderUni'
+import { useAppDispatch } from 'entitles/hooks/useAppDispatch'
+import { useSelector } from 'react-redux'
+import { RootState } from 'entitles/redux/store'
+import { fetchCategories } from 'entitles/redux/productsSlice'
 
 
-function reducer(state:any, action:any) {
-  if (action.type === 'add') {
-    return [
-      ...state,
-      {
-        name: action.payload.name,
-        id: Math.random()
-      }
-    ]
-  }
-}
 
 const Printing = (props: any) => {
 
-  const [shadow, dispatch] = useReducer(reducer, [
-    {
-      name: 'davit',
-      id: Math.random()
-    }
-  ])
+  const dispatch = useAppDispatch();
+  const categories = useSelector((state: RootState) => {
+    return state.products
+  })
+  const categoriesRef = useRef<HTMLDivElement>(null)
+  const loading = useSelector((state: RootState) => {
+    return state.products.loading
+  })
+  const error = useSelector((state: RootState) => {
+    return state.products.error
+  })
+  useEffect(() => {
+    dispatch(fetchCategories())
+  }, [dispatch])
 
-  console.log(shadow);
+console.log(categories);
 
   return (
     <div className={styles.Printing}>
@@ -36,15 +37,14 @@ const Printing = (props: any) => {
           <span className={styles.bannerBio}>Ксерокс и производство печатной продукций:
             визитки, буклеты, листовки и так дале.</span>
         </div>
-        <button onClick={() => dispatch({
-          type: 'add',
-          payload: {
-            name: 'Vardan'
-          }
-        })}>bulba</button>
+        <button>bulba</button>
       </div>
     </div>
   )
 }
 
 export default Printing
+
+function fetchBoards(): any {
+  throw new Error('Function not implemented.')
+}

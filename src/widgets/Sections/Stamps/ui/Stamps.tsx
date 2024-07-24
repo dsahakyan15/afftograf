@@ -11,7 +11,7 @@ const Stamps = () => {
           <span>Ознакомится с услугой подробнее</span>
         </Link>
       </div>
-      <img className={styles.stamp} src="https://firebasestorage.googleapis.com/v0/b/afftograf-e496c.appspot.com/o/images%2FStampSection.png?alt=media&token=393bdc2b-c1f9-4f80-baae-ae5f48b07cbd" alt="Stamp of Afftograf" />
+      <img className={styles.stamp} src="https://firebasestorage.googleapis.com/v0/b/afftograf-4be9e.appspot.com/o/StampSection.png?alt=media&token=1b7ea7f0-df09-44ea-bb3f-da509af03f34" alt="Stamp of Afftograf" />
     </div>
   )
 }
