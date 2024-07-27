@@ -1,10 +1,12 @@
 import { useEffect, useReducer, useRef } from 'react'
 import styles from './Printing.module.css'
 import HeaderUni from 'widgets/HeaderUni'
+import ProductCard from 'widgets/ProductCard'
 import { useAppDispatch } from 'entitles/hooks/useAppDispatch'
 import { useSelector } from 'react-redux'
 import { RootState } from 'entitles/redux/store'
 import { fetchCategories } from 'entitles/redux/productsSlice'
+import { product } from 'entitles/redux/interfaces'
 
 
 
@@ -12,7 +14,7 @@ const Printing = (props: any) => {
 
   const dispatch = useAppDispatch();
   const categories = useSelector((state: RootState) => {
-    return state.products
+    return state.products.categories
   })
   const categoriesRef = useRef<HTMLDivElement>(null)
   const loading = useSelector((state: RootState) => {
@@ -25,7 +27,6 @@ const Printing = (props: any) => {
     dispatch(fetchCategories())
   }, [dispatch])
 
-console.log(categories);
 
   return (
     <div className={styles.Printing}>
@@ -35,9 +36,23 @@ console.log(categories);
           <span className={styles.bannerTitle}>Полиграфия</span>
 
           <span className={styles.bannerBio}>Ксерокс и производство печатной продукций:
-            визитки, буклеты, листовки и так дале.</span>
+            визитки, буклеты, листовки и так далеe.</span>
         </div>
-        <button>bulba</button>
+        <div className={styles.products}>
+          {
+            loading ? <>loading FLAG</> : 
+              <>{
+                categories.map(category => {
+                  console.log((category), '000')
+                  return <ProductCard image={''} images={null} id={category.id} name={''} price={0} subtitle={null} />
+
+                })
+              }</>
+
+          }
+
+
+        </div>
       </div>
     </div>
   )
@@ -45,6 +60,3 @@ console.log(categories);
 
 export default Printing
 
-function fetchBoards(): any {
-  throw new Error('Function not implemented.')
-}

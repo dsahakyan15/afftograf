@@ -4,7 +4,7 @@
 .banner{
     height: 200px;
     border-radius: 30px;
-    background-image: url(https://firebasestorage.googleapis.com/v0/b/afftograf-e496c.appspot.com/o/images%2FPrintingBanner.png?alt=media&token=65c28232-8ae3-4b4e-8951-fbc72b92e640);
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/afftograf-4be9e.appspot.com/o/PrintingBanner.png?alt=media&token=c5fbd07d-c58f-4ded-a009-64c565b4a935);
     background-repeat: no-repeat;
     background-size: cover;
     padding: 75px 105px;
@@ -24,4 +24,7 @@
     width: 370px;
     color: #fff;
     font-style: 16px;
+}
+.products{
+    display: flex;
 }
