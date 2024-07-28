@@ -23,7 +23,7 @@ const Footer = () => {
                         <FaWhatsapp />
                     </a>
                 </div>
-                <Link to='/'>
+                <Link to='/#main'>
                     <img src="https://firebasestorage.googleapis.com/v0/b/afftograf-4be9e.appspot.com/o/AfftografSmallWhite.svg?alt=media&token=2585109e-5697-4dae-a05b-0b1f0754c7a2" alt="Logo Afftograf" />
                 </Link>
 

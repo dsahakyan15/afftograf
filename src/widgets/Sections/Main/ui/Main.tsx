@@ -2,9 +2,9 @@ import styles from './Main.module.css'
 
 import { Link } from 'react-router-dom'
 
-const Main = () => {
+const Main = (props:any) => {
   return (
-      <div className={styles.Main}>
+      <div id={props.id} className={styles.Main}>
           <div className={styles.mainInner}>
               <img src="https://firebasestorage.googleapis.com/v0/b/afftograf-4be9e.appspot.com/o/AfftografBig.svg?alt=media&token=48a52a85-1071-4e1d-97fc-f24982b8d858" alt="Logo BIG" />
               <div className={styles.line}></div>

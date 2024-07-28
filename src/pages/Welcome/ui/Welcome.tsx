@@ -1,5 +1,5 @@
 import styles from './Welcome.module.css'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 
 import Main from 'widgets/Sections/Main'
@@ -13,15 +13,23 @@ const Welcome = () => {
     const [animActive, setAnimActive] = useState<Boolean>(false)
 
 
-    let location = useLocation();
-    console.log(location);
+    const { hash } = useLocation()
+
+    useEffect(() => {
+        if (hash) {
+            const element = document.getElementById(hash.replace('#', ''));
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' })
+            }
+        }
+    }, [hash])
     return (
         <>
             {
                 animActive ? <WelcomeAnimation setAnimActive={setAnimActive} />
                     :
                     <div className={styles.sections}>
-                        <Main/>
+                        <Main id='main'/>
                         <Photo/>
                         <Printing/>
                         <Stamps/>

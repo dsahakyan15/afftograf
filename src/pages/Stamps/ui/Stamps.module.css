@@ -1,0 +1,41 @@
+.container {
+  padding: 30px 175px;
+}
+.banner {
+  height: 200px;
+  border-radius: 30px;
+  background-image: url(https://firebasestorage.googleapis.com/v0/b/afftograf-4be9e.appspot.com/o/StampBanner.png?alt=media&token=72eef605-8cad-4545-99c7-d0bf7f035d16);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 75px 105px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.bannerTitle {
+  font-size: 30px;
+  width: 170px;
+  color: #fff;
+  display: flex;
+  margin-right: 40px;
+}
+.bannerBio {
+  display: flex;
+  width: 370px;
+  color: #fff;
+  width: 330px;
+  font-style: 18px;
+}
+.products{
+    display: flex;
+    flex-direction: column;
+}
+.productsStamps {
+  display: grid;
+  row-gap: 50px;
+  column-gap: 63px;
+  justify-content: space-between;
+  grid-template-columns: auto auto auto auto auto;
+  margin-top: 70px;
+  margin-bottom: 20px;
+}

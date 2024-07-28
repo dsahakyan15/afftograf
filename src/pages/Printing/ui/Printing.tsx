@@ -7,6 +7,7 @@ import { useSelector } from 'react-redux'
 import { RootState } from 'entitles/redux/store'
 import { fetchCategories } from 'entitles/redux/productsSlice'
 import { product } from 'entitles/redux/interfaces'
+import { useLocation } from 'react-router-dom'
 
 
 
@@ -16,13 +17,29 @@ const Printing = (props: any) => {
   const categories = useSelector((state: RootState) => {
     return state.products.categories
   })
-  const categoriesRef = useRef<HTMLDivElement>(null)
   const loading = useSelector((state: RootState) => {
     return state.products.loading
   })
   const error = useSelector((state: RootState) => {
     return state.products.error
   })
+  const printingProducts = categories.find((category) => category?.id === 'printings')?.products || []
+  const photoProducts = categories.find((category) => category?.id === 'photos')?.products || []
+
+
+
+const {hash} = useLocation()
+
+useEffect(() => {
+  if(hash){
+    const element = document.getElementById(hash.replace('#',''));
+    if(element){
+      element.scrollIntoView({behavior:'smooth'})
+    }
+  }
+},[hash])
+
+
   useEffect(() => {
     dispatch(fetchCategories())
   }, [dispatch])
@@ -39,19 +56,43 @@ const Printing = (props: any) => {
             визитки, буклеты, листовки и так далеe.</span>
         </div>
         <div className={styles.products}>
-          {
-            loading ? <>loading FLAG</> : 
-              <>{
-                categories.map(category => {
-                  console.log((category), '000')
-                  return <ProductCard image={''} images={null} id={category.id} name={''} price={0} subtitle={null} />
+          <div className={styles.productsPrinting}>
+            {
+              loading ? <>loading FLAG</> :
+                <>{
+                  printingProducts.map((product: product) => {
+                    return <ProductCard
+                      image={product.image || ''}
+                      images={product.images}
+                      id={product.id || 'NoneID'}
+                      name={product.name || ''}
+                      price={product.price || 0}
+                      subtitle={product.subtitle || ''} />
 
-                })
-              }</>
+                  })
+                }</>
 
-          }
+            }
+          </div>
+          <div className={styles.line}></div>
+          <div id="photo" className={styles.productsPhoto}>
+            {
+              loading ? <>loading FLAG</> :
+                <>{
+                  photoProducts.map((product: product) => {
+                    return <ProductCard
+                      image={product.image || ''}
+                      images={product.images}
+                      id={product.id || 'NoneID'}
+                      name={product.name || ''}
+                      price={product.price || 0}
+                      subtitle={product.subtitle || ''} />
 
+                  })
+                }</>
 
+            }
+          </div>
         </div>
       </div>
     </div>
