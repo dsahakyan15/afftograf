@@ -64,6 +64,7 @@ useEffect(() => {
                     return <ProductCard
                       image={product.image || ''}
                       images={product.images}
+                      key={product.id}
                       id={product.id || 'NoneID'}
                       name={product.name || ''}
                       price={product.price || 0}

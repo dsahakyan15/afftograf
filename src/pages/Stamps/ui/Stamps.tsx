@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styles from './Stamps.module.css'
 import HeaderUni from 'widgets/HeaderUni'
 import { useAppDispatch } from 'entitles/hooks/useAppDispatch';
@@ -6,6 +6,7 @@ import { RootState } from 'entitles/redux/store';
 import { useSelector } from 'react-redux';
 import { product } from 'entitles/redux/interfaces'
 import ProductCard from 'widgets/ProductCard';
+import { fetchCategories } from 'entitles/redux/productsSlice';
 
 const Stamps = () => {
   const dispatch = useAppDispatch();
@@ -18,7 +19,14 @@ const Stamps = () => {
   const error = useSelector((state: RootState) => {
     return state.products.error
   })
-  const stampsProducts = categories.find((category) => category?.id === 'stamps')?.products || []
+  const stampsProducts = categories.find((category) => category?.id === 'stamps')?.products || [];
+
+
+  useEffect(() => {
+    dispatch(fetchCategories())
+  }, [dispatch])
+
+
 
 
   return (
@@ -41,6 +49,7 @@ const Stamps = () => {
                     return <ProductCard
                       image={product.image || ''}
                       images={product.images}
+                      key={product.id}
                       id={product.id || 'NoneID'}
                       name={product.name || ''}
                       price={product.price || 0}
