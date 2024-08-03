@@ -7,6 +7,7 @@ import Photo from "pages/Photo"
 import Printing from "pages/Printing"
 import Stamps from "pages/Stamps"
 import WoodArt from "pages/WoodArt"
+import Product from "pages/Product"
 import { Provider } from "react-redux"
 import { store } from "entitles/redux/store"
 
@@ -24,6 +25,7 @@ const App = () => {
           <Route path="/printing" element={<Printing />} />
           <Route path="/stamps" element={<Stamps />} />
           <Route path="/woodArt" element={<WoodArt />} />
+          <Route path="/product/:id" element={<Product />} />
           <Route path="/" element={<Welcome />} />
         </Routes>
         <Footer />

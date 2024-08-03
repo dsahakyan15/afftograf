@@ -1,0 +1,40 @@
+.container {
+  padding: 30px 175px;
+}
+.banner {
+  height: 200px;
+  border-radius: 30px;
+  background-image: url(https://firebasestorage.googleapis.com/v0/b/afftograf-4be9e.appspot.com/o/woodArtBanner.png?alt=media&token=27a7c225-18ba-4fe6-8864-be8101b1114c);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 75px 105px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.bannerTitle {
+  font-size: 30px;
+  width: 170px;
+  color: #fff;
+  display: flex;
+  margin-right: 40px;
+}
+.bannerBio {
+  display: flex;
+  color: #fff;
+  width: 240px;
+  font-style: 18px;
+}
+.products {
+  display: flex;
+  flex-direction: column;
+}
+.productsWoodArt {
+  display: grid;
+  row-gap: 50px;
+  column-gap: 63px;
+  justify-content: space-between;
+  grid-template-columns: auto auto auto auto auto;
+  margin-top: 70px;
+  margin-bottom: 20px;
+}

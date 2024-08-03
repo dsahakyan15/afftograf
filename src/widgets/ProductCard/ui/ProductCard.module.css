@@ -11,6 +11,7 @@
 .productImage {
   width: 165px;
   margin: 0 auto;
+  overflow: hidden;
   height: 145px;
   margin-bottom: 5px;
   border-radius: 15px;

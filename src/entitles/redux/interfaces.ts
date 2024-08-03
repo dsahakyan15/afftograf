@@ -1,7 +1,7 @@
 export interface product {
     image: string;
     images: string[] | null;
-    id: string;
+    id: number;
     name: string;
     price: number;
     subtitle: string | null;

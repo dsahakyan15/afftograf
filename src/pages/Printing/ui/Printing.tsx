@@ -65,7 +65,7 @@ useEffect(() => {
                       image={product.image || ''}
                       images={product.images}
                       key={product.id}
-                      id={product.id || 'NoneID'}
+                      id={product.id || 0}
                       name={product.name || ''}
                       price={product.price || 0}
                       subtitle={product.subtitle || ''} />
@@ -84,7 +84,7 @@ useEffect(() => {
                     return <ProductCard
                       image={product.image || ''}
                       images={product.images}
-                      id={product.id || 'NoneID'}
+                      id={product.id || 0}
                       name={product.name || ''}
                       price={product.price || 0}
                       subtitle={product.subtitle || ''} />
