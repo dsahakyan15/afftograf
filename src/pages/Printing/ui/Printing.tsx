@@ -21,6 +21,7 @@ const Printing = (props: any) => {
     return state.products.loading
   })
   const error = useSelector((state: RootState) => {
+    console.log(state.products.error)
     return state.products.error
   })
   const printingProducts = categories.find((category) => category?.id === 'printings')?.products || []
