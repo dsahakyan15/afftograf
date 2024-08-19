@@ -6,10 +6,11 @@ import { fetchCategories } from 'entitles/redux/productsSlice';
 import { RootState } from 'entitles/redux/store';
 import { useSelector } from 'react-redux';
 import HeaderUni from 'widgets/HeaderUni';
-import ImageCanvas from './ImageCanvas';
+import ImageBlock from './ImageBlock';
 
 import { IoIosArrowDown, IoIosArrowUp, IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import ProductCard from 'widgets/ProductCard';
+import AnotherProductsCarousel from './AnotherProductsCarousel';
 
 
 const Product = () => {
@@ -32,12 +33,29 @@ const Product = () => {
     const error = useSelector((state: RootState) => {
         return state.products.error
     })
+
+
     const product = categories.flatMap(category => category.products ?? []).find(product => product?.id === productId);
-    console.log(product?.image, '-----')
+
+    const anotherProducts = categories
+        .flatMap(category => category.products ?? [])
+        .filter(product => {
+            return Number(product.id.toString().split('')[0]) === Number(productId.toString().split('')[0])
+        })
+        .filter(product => product?.id !== productId);
+
+    console.log(anotherProducts, '-----')
+
+
+
+
+
     useEffect(() => {
         dispatch(fetchCategories())
 
     }, [dispatch])
+
+
     useEffect(() => {
         if (product) {
             setCertainImage(product?.image || '')
@@ -50,7 +68,7 @@ const Product = () => {
             <HeaderUni />
             <div className={styles.container}>
                 <div className={styles.productInfo}>
-                    <ImageCanvas image={certainImage} />
+                    <ImageBlock image={certainImage} />
                     <div className={styles.productActions}>
                         <div className={styles.leftActions}>
                             <div className={styles.pricePanel}>
@@ -109,38 +127,8 @@ const Product = () => {
                 <div className={styles.anotherProducts}>
 
                     <span className={styles.anotherTitle}>Другие товары из этой категории </span>
-                    <div className={styles.productsSliderContainer}>
-                        <div
-                            className={styles.leftArrowSlider}>
-                            <img
-                                className={styles.leftArrowSliderIcon}
-                                alt=''
-                                src='https://firebasestorage.googleapis.com/v0/b/afftograf-4be9e.appspot.com/o/leftArrow.svg?alt=media&token=1b838219-ffde-431a-9b87-7903904aceb2' />
-                        </div>
-                        <div className={styles.wrappeerSlider}>
-                            <div
-                                className={styles.productsSlider}>
-                                <ProductCard image={''} images={null} id={0} name={'Название товара'} price={0} subtitle={null} />
-                                <ProductCard image={''} images={null} id={0} name={'Название товара'} price={0} subtitle={null} />
-                                <ProductCard image={''} images={null} id={0} name={'Название товара'} price={0} subtitle={null} />
-                                <ProductCard image={''} images={null} id={0} name={'Название товара'} price={0} subtitle={null} />
-                                <ProductCard image={''} images={null} id={0} name={'Название товара'} price={0} subtitle={null} />
-                                <ProductCard image={''} images={null} id={0} name={'Название товара'} price={0} subtitle={null} />
-                                <ProductCard image={''} images={null} id={0} name={'Название товара'} price={0} subtitle={null} />
-                                <ProductCard image={''} images={null} id={0} name={'Название товара'} price={0} subtitle={null} />
-                                <ProductCard image={''} images={null} id={0} name={'Название товара'} price={0} subtitle={null} />
-                                <ProductCard image={''} images={null} id={0} name={'Название товара'} price={0} subtitle={null} />
-                            </div>
-                        </div>
-
-                        <div
-                            className={styles.rightArrowSlider}>
-                            <img
-                                className={styles.rightArrowSliderIcon}
-                                alt=''
-                                src='https://firebasestorage.googleapis.com/v0/b/afftograf-4be9e.appspot.com/o/rightArrow.svg?alt=media&token=2113f142-7321-4f5f-9fe0-1c151b471637' />
-                        </div>
-                    </div>
+                    
+                    <AnotherProductsCarousel products={anotherProducts} />
                 </div>
                 Product {productId}
             </div>
