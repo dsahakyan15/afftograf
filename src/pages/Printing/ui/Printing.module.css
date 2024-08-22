@@ -24,6 +24,10 @@
   color: #fff;
   font-style: 16px;
 }
+.photoTitle{
+  font-size: 30px;
+  margin-left: 40px;
+}
 .products{
     display: flex;
     flex-direction: column;
@@ -36,6 +40,9 @@
   grid-template-columns: auto auto auto auto auto;
   margin-top: 70px;
   margin-bottom: 20px;
+}
+.productsPhoto{
+  margin-top: 20px;
 }
 .line{
     width: 1200px;

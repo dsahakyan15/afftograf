@@ -44,11 +44,6 @@ const Product = () => {
         })
         .filter(product => product?.id !== productId);
 
-    console.log(anotherProducts, '-----')
-
-
-
-
 
     useEffect(() => {
         dispatch(fetchCategories())
@@ -93,12 +88,14 @@ const Product = () => {
                                     </div>
                                 </div>
                                 <span className={styles.productPrice}>
-                                    Цена <br /> <span>{product?.price}₽</span>
+                                    Цена <br /> <span>{product?.price ? (product?.price * prodCount)+ '₽' : 'Цена не указана'}</span>
                                 </span>
                             </div>
                             <div className={styles.buyBtns}>
                                 <button className={styles.addCart}>В корзину</button>
-                                <button title='Купить сейчас' className={styles.buyNow}><img src="https://firebasestorage.googleapis.com/v0/b/afftograf-4be9e.appspot.com/o/bag.svg?alt=media&token=b88b97f2-cc8f-484b-be8c-a62b4584b9d0" alt="buy" /></button>
+                                <button title='Купить сейчас' className={styles.buyNow}>
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/afftograf-4be9e.appspot.com/o/bag.svg?alt=media&token=b88b97f2-cc8f-484b-be8c-a62b4584b9d0" alt="buy" />
+                                    </button>
                             </div>
                         </div>
                         <div className={styles.rightActions}>
@@ -109,7 +106,7 @@ const Product = () => {
 
                                         product?.images?.map((image) => {
                                             return <div key={image} className={styles.image}>
-                                                <img src={image} alt="" />
+                                                <img src={image} alt="Alternatives" />
                                             </div>
                                         })
 
@@ -118,8 +115,10 @@ const Product = () => {
                                 </div>
                             </div>
                             <div className={styles.subtitle}>
-                                Краткое описание товара, пример:
-                                деревянный Арангутанг - это фигурка знаменитой личности, который проводил свое прожывание в лесах с монгустами и так далее, (тут должны вписатся описания товаров, зачем используются и зачем нужны).
+                                {
+                                    product?.subtitle || 'Краткое описание товара, пример:                                деревянный Арангутанг - это фигурка знаменитой личности, который проводил свое прожывание в лесах с монгустами и так далее, (тут должны вписатся описания товаров, зачем используются и зачем нужны).'
+                                }
+                                
                             </div>
                         </div>
                     </div>
@@ -130,7 +129,6 @@ const Product = () => {
                     
                     <AnotherProductsCarousel products={anotherProducts} />
                 </div>
-                Product {productId}
             </div>
         </div>
     )

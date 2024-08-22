@@ -21,7 +21,6 @@ const Printing = (props: any) => {
     return state.products.loading
   })
   const error = useSelector((state: RootState) => {
-    console.log(state.products.error)
     return state.products.error
   })
   const printingProducts = categories.find((category) => category?.id === 'printings')?.products || []
@@ -77,6 +76,7 @@ useEffect(() => {
             }
           </div>
           <div className={styles.line}></div>
+          <span className={styles.photoTitle}>Фото</span>
           <div id="photo" className={styles.productsPhoto}>
             {
               loading ? <>loading FLAG</> :
@@ -86,6 +86,7 @@ useEffect(() => {
                       image={product.image || ''}
                       images={product.images}
                       id={product.id || 0}
+                      key={product.id}
                       name={product.name || ''}
                       price={product.price || 0}
                       subtitle={product.subtitle || ''} />
