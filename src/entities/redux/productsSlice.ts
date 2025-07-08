@@ -4,7 +4,7 @@ import {
     addDoc,
     getDoc,
     setDoc,
-    deleteDoc,
+    deleteDoc, 
     updateDoc
 } from "@firebase/firestore";
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
