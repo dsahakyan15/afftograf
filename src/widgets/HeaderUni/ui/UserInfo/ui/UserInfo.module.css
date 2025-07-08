@@ -1,0 +1,59 @@
+.userInfo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+
+}
+.cart{
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #36561190;
+    display: flex;
+    align-items: center;
+}
+.cart:hover{
+    color: #365611;
+    transition: color 0.5s ease;
+}
+.displayName{
+    font-size: 16px;
+    color: #00000050;
+    font-weight: 600;
+    display: flex;
+    margin-left: 10px;
+}
+.displayName:hover{
+    color: #000;
+    transition: color 0.5s ease;
+}
+.logout{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    display: flex;
+    font-size: 20px;
+    color: #36561190;
+}
+.logout:hover{
+    color: #365611;
+    transition: color 0.5s ease;
+}
+.signIn{
+    display: flex;
+
+}
+.signIn>a{
+    color: #00000050;
+    display: flex;
+    margin: 0 10px;
+    font-size: 20px;
+}

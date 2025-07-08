@@ -1,0 +1,14 @@
+.imageWrapper{
+    width: 463px;
+    height: 414px;
+    background-color: #d9d9d9;
+    border-radius: 16px;
+    overflow: hidden;
+    align-items: center;
+    display: flex;
+  object-fit: none;
+}
+.imageWrapper > img{
+    margin: 0 auto;
+    scale: 1;
+}

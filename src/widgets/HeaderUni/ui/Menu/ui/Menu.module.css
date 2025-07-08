@@ -1,0 +1,37 @@
+.menu{
+    margin-right: 100px;
+    display: flex;
+}
+.mainLinks{
+    display: flex;
+    align-items: center;
+}
+.mainLink {
+  color: rgba(0, 0, 0, 0.50);
+  font-size: 20px;
+  margin: 0 10px;
+  transition: 100ms;
+}
+
+.mainLink:hover {
+  color:#365611;
+}
+.divider{
+    border: 1px solid rgba(0, 0, 0, 0.50);
+    box-sizing: border-box;
+    transform: rotateZ(15deg);
+    background-color: rgba(0, 0, 0, 0.50);
+    margin: 0 10px;
+    height: 25px;
+    border-radius: 5px;
+}
+.divider:hover{
+    background-color: #365611;
+    border:1px solid #365611;
+}
+.wood{
+    width: 70px;    
+}
+.wood:hover{
+    filter: invert(26%) sepia(13%) saturate(2913%) hue-rotate(45deg) brightness(97%) contrast(87%);
+}

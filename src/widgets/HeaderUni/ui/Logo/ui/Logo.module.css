@@ -1,0 +1,31 @@
+.logo{
+display: flex;
+text-align: center;
+align-items: center;
+margin: 7px 0;
+}
+.afftograf{
+    width: 170px;
+}
+/* .divider{
+    border: 1px solid black;
+    box-sizing: border-box;
+    transform: rotateZ(15deg);
+    background-color: #000;
+    margin: 0 10px;
+    height: 30px;
+    border-radius: 5px;
+} */
+ .divider{
+    width: 10px;
+    height: 10px;
+    border-radius:100px;
+    background-color: #365611;
+    margin: 0 12px;
+ }
+.logoPhoto{
+    font-size: 20px;
+}
+.logoWood{
+    width: 75px;
+}

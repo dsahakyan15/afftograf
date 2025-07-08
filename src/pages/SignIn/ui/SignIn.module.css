@@ -1,0 +1,29 @@
+.signIn {
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/afftograf-4be9e.appspot.com/o/wavesBg.jpg?alt=media&token=a57fd13c-732d-409a-84ba-084c4743647f');
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: myAnim 40s linear 0s infinite reverse both;
+}
+@keyframes myAnim {
+    0% {
+        background-position: 1250px 0% ;
+    }
+
+    100% {
+        background-position: 0 1250px ;
+    }
+}
+
+.signInForm{
+    background-color: #fff;
+    padding: 33px 46px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6);
+    max-width: 400px;
+    max-height: 330px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

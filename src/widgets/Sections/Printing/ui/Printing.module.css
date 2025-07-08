@@ -1,0 +1,32 @@
+.Printing {
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/afftograf-4be9e.appspot.com/o/PrintingSection.png?alt=media&token=d670bf84-27cb-4c7c-b930-4deea3b967f0");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  min-height: 130vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.text{
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.title {
+  font-size: 64px;
+  margin: 150px 0 0 0;
+}
+.pretitle {
+  font-size: 22px;
+  margin: 25px 0;
+  text-align: center;
+}
+.link {
+  color: #365611;
+  font-size: 20px;
+  display: flex;
+  margin: 0 auto;
+}

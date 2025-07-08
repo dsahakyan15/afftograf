@@ -1,0 +1,25 @@
+.Main {
+  height: 100vh;
+  display: flex;
+}
+.mainInner {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+.line {
+  width: 450px;
+  margin: 20px auto;
+  border: 1px solid black;
+}
+.mainLinks{
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mainLink {
+  color: #000;
+  font-size: 28px;
+  margin: 0 10px;
+}

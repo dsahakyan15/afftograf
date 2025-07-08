@@ -1,0 +1,150 @@
+.container {
+  padding: 30px 175px;
+  display: flex;
+  flex-direction: column;
+}
+
+.productInfo {
+  display: flex;
+  align-items: center;
+}
+
+.productActions {
+  display: flex;
+  margin-left: 150px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.leftActions {
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+}
+
+.pricePanel {
+  margin-bottom: 36px;
+}
+
+.productTitle {
+  font-size: 40px;
+}
+
+.productCount {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 0;
+}
+
+.productCount>span {
+  font-size: 20px;
+}
+
+.countBtns {
+  font-size: 26px;
+  align-items: center;
+}
+
+.upBtn,
+.downBtn {
+  font-size: 36px;
+  color: #00000050;
+  transition: 0.1s;
+  cursor: pointer;
+}
+
+.downBtn {
+  margin-right: 15px;
+}
+
+.upBtn:hover,
+.downBtn:hover {
+  color: #000;
+}
+
+.productPrice {
+  font-size: 34px;
+}
+
+.productPrice>span {
+  font-size: 40px;
+  color: #365611;
+}
+
+.buyBtns {
+  display: flex;
+  align-items: center;
+}
+
+.addCart,
+.buyNow {
+  padding: 17px 24px;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 16px;
+  background: linear-gradient(0deg, #365611, #365611);
+  border: none;
+  transition:background 0.5s ease;
+}
+
+.buyNow {
+  margin-left: 12px;
+  padding: 18px 17px;
+}
+
+.addCart:hover,
+.buyNow:hover {
+  background: linear-gradient(50deg, #365611, #719746);
+
+}
+
+.rightActions {}
+
+.imagesTitle {
+  font-size: 20px;
+  margin-bottom: 19px;
+  display: block;
+}
+
+.productImages {
+  display: grid;
+  row-gap: 19px;
+  column-gap: 19px;
+  justify-content: space-between;
+  grid-template-columns: auto auto auto auto;
+  margin-bottom: 25px;
+}
+
+.image {
+  background-color: #d9d9d9;
+  cursor: pointer;
+  width: 66px;
+  overflow: hidden;
+  border: 2px solid #d9d9d9;
+  height: 66px;
+  transition: 0.3;
+  border-radius: 18px;
+}
+
+.image:hover {
+  border: 2px solid #365611;
+}
+.image >img{
+  height: 66px;
+  width: 66px;
+}
+
+.subtitle {
+  width: 250px;
+  color: #00000050;
+  font-size: 12px;
+}
+
+.anotherProducts {
+  margin-top: 75px;
+}
+
+.anotherTitle {
+  margin-left: 50px;
+  font-size: 26px;
+}

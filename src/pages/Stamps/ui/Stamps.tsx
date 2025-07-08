@@ -1,0 +1,71 @@
+import React, { useEffect } from 'react'
+import styles from './Stamps.module.css'
+import HeaderUni from 'widgets/HeaderUni'
+import { useAppDispatch } from 'entities/hooks/useAppDispatch';
+import type { RootState } from 'entities/redux/store';
+import { useSelector } from 'react-redux';
+import type { product } from 'entities/redux/interfaces'
+import ProductCard from 'widgets/ProductCard';
+import { fetchCategories } from 'entities/redux/productsSlice';
+
+const Stamps = () => {
+  const dispatch = useAppDispatch();
+  const categories = useSelector((state: RootState) => {
+    return state.products.categories
+  })
+  const loading = useSelector((state: RootState) => {
+    return state.products.loading
+  })
+  const error = useSelector((state: RootState) => {
+    return state.products.error
+  })
+  const stampsProducts = categories.find((category) => category?.id === 'stamps')?.products || [];
+
+
+  useEffect(() => {
+    dispatch(fetchCategories())
+  }, [dispatch])
+
+
+
+
+  return (
+    <div className={styles.Stamps}>
+      <HeaderUni />
+      <div className={styles.container}>
+        <div className={styles.banner}>
+          <span className={styles.bannerTitle}>Печать и
+            штампы</span>
+
+          <span className={styles.bannerBio}>Изготовление разных видов печатей,
+            штампов и факсимиле.</span>
+        </div>
+        <div className={styles.products}>
+          <div className={styles.productsStamps}>
+            {
+              loading ? <>loading FLAG</> :
+                <>{
+                  stampsProducts.map((product: product) => {
+                    return <ProductCard
+                      image={product.image || ''}
+                      images={product.images}
+                      key={product.id}
+                      id={product.id || 0}
+                      name={product.name || ''}
+                      price={product.price || 0}
+                      subtitle={product.subtitle || ''}
+                      similar={null} />
+
+                  })
+                }</>
+
+            }
+          </div>
+
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default Stamps

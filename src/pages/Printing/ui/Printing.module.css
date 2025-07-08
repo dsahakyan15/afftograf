@@ -1,0 +1,52 @@
+.container {
+  padding: 30px 175px;
+}
+.banner {
+  height: 200px;
+  border-radius: 30px;
+  background-image: url(https://firebasestorage.googleapis.com/v0/b/afftograf-4be9e.appspot.com/o/PrintingBanner.png?alt=media&token=c5fbd07d-c58f-4ded-a009-64c565b4a935);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 75px 105px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.bannerTitle {
+  font-size: 40px;
+  color: #fff;
+  display: flex;
+  margin-right: 40px;
+}
+.bannerBio {
+  display: flex;
+  width: 370px;
+  color: #fff;
+  font-style: 16px;
+}
+.photoTitle{
+  font-size: 30px;
+  margin-left: 40px;
+}
+.products{
+    display: flex;
+    flex-direction: column;
+}
+.productsPrinting,.productsPhoto {
+  display: grid;
+  row-gap: 50px;
+  column-gap: 63px;
+  justify-content: space-between;
+  grid-template-columns: auto auto auto auto auto;
+  margin-top: 70px;
+  margin-bottom: 20px;
+}
+.productsPhoto{
+  margin-top: 20px;
+}
+.line{
+    width: 1200px;
+    height: 1px;
+    background-color: #00000070;
+    margin: 20px auto;
+}
