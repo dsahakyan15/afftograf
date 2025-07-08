@@ -39,7 +39,7 @@ export const fetchCategory = createAsyncThunk(
 
         return { ...categoryTemp }
 
-    }
+    } 
 )
 
 const initialState: productsInitialStateProps = {
