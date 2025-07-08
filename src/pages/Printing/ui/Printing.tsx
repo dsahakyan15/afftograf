@@ -12,7 +12,7 @@ import { useLocation } from 'react-router-dom'
 
 
 const Printing = (props: any) => {
-
+const tem = useRef(null);
   const dispatch = useAppDispatch();
   const categories = useSelector((state: RootState) => {
     return state.products.categories
